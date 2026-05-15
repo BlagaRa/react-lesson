@@ -1,5 +1,4 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import { useCart } from '../../context/CartContext'
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   [
@@ -10,8 +9,6 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   ].join(' ')
 
 export function AppShell() {
-  const { itemCount } = useCart()
-
   return (
     <div className="flex min-h-svh flex-col bg-zinc-950 text-zinc-100">
       <header className="sticky top-0 z-40 border-b border-white/10 bg-zinc-950/80 backdrop-blur-xl">
@@ -40,14 +37,7 @@ export function AppShell() {
               Catalog
             </NavLink>
             <NavLink to="/cart" className={navLinkClass}>
-              <span className="inline-flex items-center gap-2">
-                Cart
-                {itemCount > 0 ? (
-                  <span className="rounded-full bg-lime-300 px-2 py-0.5 text-xs font-semibold text-zinc-950 tabular-nums">
-                    {itemCount > 99 ? '99+' : itemCount}
-                  </span>
-                ) : null}
-              </span>
+              Cart
             </NavLink>
           </nav>
         </div>
@@ -64,12 +54,12 @@ export function AppShell() {
               Kinetic Supply
             </p>
             <p className="mt-2 max-w-md text-sm leading-relaxed text-zinc-400">
-              Demo: catalog and products from mock files, cart in the browser. No network
-              requests; the backend stays separate until you wire up an API.
+              Practice project: all copy and prices are written directly in JSX files (no
+              separate data file, no useState / useEffect yet).
             </p>
           </div>
           <div className="text-xs text-zinc-500">
-            Images via Unsplash • Built with React + Tailwind
+            Images from Unsplash • React + Tailwind
           </div>
         </div>
       </footer>

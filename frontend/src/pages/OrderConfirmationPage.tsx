@@ -7,9 +7,16 @@ export function OrderConfirmationPage() {
         Order confirmation
       </h1>
       <p className="mt-4 leading-relaxed text-zinc-400">
-        After you implement checkout, show the order summary here (from state, context,
-        or a server response). Right now the app does not submit any data anywhere.
+        Nothing was sent to a server. The order number is plain text typed right here.
       </p>
+      <div className="mt-8 rounded-3xl border border-white/10 bg-zinc-900/25 p-6">
+        <p className="text-sm text-zinc-500">Order number</p>
+        <p className="mt-2 font-mono text-2xl font-semibold text-white">DEMO-ORDER-48291</p>
+        <p className="mt-4 text-sm text-zinc-400">
+          In a real app you would show data returned from an API or kept in state after
+          checkout.
+        </p>
+      </div>
       <Link
         to="/products"
         className="mt-8 inline-flex rounded-full bg-lime-300 px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-lime-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
