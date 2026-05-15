@@ -9,7 +9,7 @@ export function CartPage() {
             Cart
           </p>
           <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-white">
-            Example cart (fully hardcoded)
+            Example cart 
           </h1>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-zinc-400">
             The rows below do not change when you click — they are static HTML only. You can
